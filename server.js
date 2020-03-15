@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // Connect to the Mongo DB
 //mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
-var MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/heroku_6nd3r4vx";
+var MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 mongoose.connect(MONGO_URI);
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
