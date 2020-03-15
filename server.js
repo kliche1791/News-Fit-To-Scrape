@@ -34,9 +34,9 @@ app.set("view engine", "handlebars");
 // Routes
 
 // A GET route for scraping the echoJS website
-app.get("/", function(req, res) {
+// app.get("/", function(req, res) {
   
-});
+// });
 
 app.get("/scrape", function(req, res) {
   axios.get("https://www.inquirer.com/").then(function(response) {
@@ -91,7 +91,7 @@ app.get("/scrape", function(req, res) {
   });
 
 // Route for getting all Articles from the db
-app.get("/articles", function(req, res) {
+app.get("/", function(req, res) {
   db.Article.find({}, null, {sort: {created: -1}}, function(err, data) {
 		if(data.length === 0) {
 			res.render("placeholder", {message: "Uh Oh. Looks like we don't have any new articles."});
