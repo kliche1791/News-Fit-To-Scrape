@@ -5,7 +5,7 @@ $(document).ready(function() {
   // and "scrape new article" buttons
   var articleContainer = $(".article-container");
   $(document).on("click", ".btn.save", handleArticleSave);
-  $(document).on("click", ".scrape-new", handleArticleScrape);
+  $(document).on("click", "scrape-new", handleArticleScrape);
   $(".clear").on("click", handleArticleClear);
 
   function initPage() {
